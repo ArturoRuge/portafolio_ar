@@ -222,3 +222,75 @@ html{
 	width: calc((100% - 20px * 1) / 1);	
 }
 }
+/*------------------------------
+		ESTILOS
+--------------------------------*/
+/*-------Cabecera----*/
+header{
+	height: 100px;
+	background-color:#333;
+}
+
+/*--------Navegacion---------*/
+ul.topnav{
+	overflow: hidden;
+	background-color:#333;
+}
+ul.topnav li{
+	float:right;
+}
+ul.topnav li a{
+	display: inline-block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 41px 16px;
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 17px;
+}
+ul.topnav li a:hover{
+	background-color: #555;
+}
+ul.topnav li.icon{
+	display: none;
+}
+
+
+/*-----maquetacion mobile -----*/
+@media (max-width: 480px){
+	ul.topnav li{
+		display: none;
+	}
+	ul.topnav li.icon{
+		float: right;
+		display: inline-block;
+	}
+}
+@media (max-width: 480px){
+	ul.topnav.responsive {position: relative;}
+	ul.topnav.responsive li.icon{
+		position: absolute;
+		right:0;
+		top:0;
+	}
+	ul.topnav.responsive li{
+		float: none;
+		display: inline;
+	}
+	ul.topnav.responsive li a{
+		display: block;
+		text-align: left;
+		padding: 17px 16px;
+	}
+
+}
+/*-------FOOTER------*/
+footer{
+	background-color: #333;
+	width: 100%;
+}
+footer p{
+	color: white;
+	text-align: center;
+	padding:40px;
+}
