@@ -7,61 +7,64 @@
 		<meta name="description" content="">
 		<meta name="author" content="Arturo Ruge">
 		<link href="css/estilos.css" rel="stylesheet">
+		<script src="js/actions.js"></script>
 	</head>
 
 	<body>
 		<header>
-			<nav>
-				<ul>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">Inicio</a></li>
-				</ul>
-			</nav>
+			<div class="l-wrap">
+				<nav>
+					<ul class="topnav" id="myTopnav">
+						<li><a class="active" href="#">Inicio</a></li>
+						<li><a href="#">Sobre Mi</a></li>
+						<li><a href="#">Portafolio</a></li>
+						<li><a href="#">Contactame</a></li>
+						<li class="icon"> 
+							<a href="javascript:void(0);" style="font-size:15px;"onclick="myFunction()">&#9776;</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
 		</header>
-			<div class="l-wrap">
+			<section class="l-wrap">
 				<div class="l-mapa-mental grid-item"></div>
-			</div>
-			<div class="l-wrap">
+			</section>
+			<section class="l-wrap">
 				<div class="l-description-section">
 					<div class="l-image grid-item"></div>
 					<div class="l-description grid-item"></div>
 				</div>
-			</div>
-			<div class="l-wrap">
+			</section>
+			<section class="l-wrap">
 				<div class="l-mapa-mental grid-item"></div>
-			</div>
-		</div>
-		<div class="l-wrap l-description-services">
-				<div class="l-services grid-item"></div>
-				<div class="l-services grid-item"></div>
-				<div class="l-services grid-item"></div>
-			</div>
-		</div>
-		<div class="l-wrap">
+			</section>
+		<section class="l-wrap l-description-services">
+				<article class="l-services grid-item"></article>
+				<article class="l-services grid-item"></article>
+				<article class="l-services grid-item"></article>
+		</section>
+		<section class="l-wrap">
 				<div class="l-description-section">
 					<div class="l-description grid-item"></div>
 					<div class="l-image grid-item"></div>
 				</div>
-			</div>
-		
-		<div class="l-wrap">
+		</section>
+		<section class="l-wrap">
 			<div class="l-portfolio-section">
-				<div class="l-portfolio-item grid-item"></div>
-				<div class="l-portfolio-item grid-item"></div>
-				<div class="l-portfolio-item grid-item"></div>
-				<div class="l-portfolio-item grid-item"></div>
-				<div class="l-portfolio-item grid-item"></div>
-				<div class="l-portfolio-item grid-item"></div>
+				<article class="l-portfolio-item grid-item"></article>
+				<article class="l-portfolio-item grid-item"></article>
+				<article class="l-portfolio-item grid-item"></article>
+				<article class="l-portfolio-item grid-item"></article>
+				<article class="l-portfolio-item grid-item"></article>
+				<article class="l-portfolio-item grid-item"></article>
 			</div>
-		</div>
-		<div class="l-wrap">
+		</section>
+		<article class="l-wrap">
 			<div class="l-description-section">
 				<div class="l-image grid-item"></div>
 				<div class="l-description grid-item"></div>
 			</div>
-		</div>
+		</article>
 		<div class="l-wrap">
 			<div class="l-contact-form">
 				<div class="l-input grid-item"></div>
@@ -83,9 +86,9 @@
 				<div class="l-social-item grid-item"></div>
 			</div>
 		</div>
-		<div class="l-wrap">
-			<div class="l-footer grid-item"></div>
-		</div>
+		<footer>
+			<p>Diseñado, ilustrado por Arturo Ruge - 2016</p>
+		</footer>
 	</body>
 
 </html>
