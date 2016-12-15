@@ -1,0 +1,234 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*---------------------------------
+		GRID System
+------------------------------*/
+html{
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+/*------ CELULARES -----*/
+.l-wrap{
+	max-width: 480px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.grid-item{
+	margin: 10px 10px 20px;
+	background-color: grey;
+	height: 200px;
+}
+.l-mapa-mental{
+	width: calc((100% - 20px * 1) / 1);
+}
+.l-description{
+	width: calc((100% - 20px * 1) / 1); 
+}
+.l-image{
+	width: calc((100% - 20px * 1) / 1);
+}
+.l-services{
+		width: calc((100% - 20px * 1) / 1);	
+}
+.l-portfolio-item{
+		width: calc((100% - 20px * 1) / 1);	
+}
+.l-input{
+	width: calc((100% - 20px * 1) / 1);	
+}
+.l-thanks-text{
+	width: calc((100% - 20px * 1) / 1);	
+}
+.l-social-links:after{
+	content:"";
+	display: table;
+	clear:both;
+}
+.l-social-item{
+	width: calc((100% - 20px * 6) / 6);
+	float:left;	
+}
+.l-footer{
+	width: calc((100% - 20px * 1) / 1);	
+}
+
+/*------ PANTALLA TABLESTS -----*/
+@media (min-width: 480px){
+.l-wrap{
+	max-width: 7800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.grid-item{
+	margin-right: 10px;
+	margin-left: 10px;
+	float: left;
+	background-color: grey;
+	height: 200px;
+}
+.l-mapa-mental{
+	width: calc((100% - 20px * 1) / 1);
+}
+.l-description-section:after{
+	content:"";
+	display: table;
+	clear: both;
+}
+.l-description{
+	width: calc((100% - 20px * 2.4) / 2.4); 
+}
+.l-image{
+	width: calc((100% - 20px * 1.715) / 1.715);
+}
+.l-description-services:after,
+.l-portfolio-section:after,
+.l-contact-form:after,
+.l-social-links:after{
+	content:"";
+	display: table;
+	clear: both;
+}
+.l-services{
+		width: calc((100% - 20px * 3) / 3);	
+}
+.l-portfolio-item{
+		width: calc((100% - 20px * 2) / 2);	
+}
+.l-input{
+	width: calc((100% - 20px * 2) / 2);	
+}
+.l-contact-form .l-input:nth-child(3),
+.l-contact-form .l-input:nth-child(4){
+		width: calc((100% - 20px * 1) / 1);	
+
+}
+.l-thanks-text{
+	width: calc((100% - 20px * 1) / 1);	
+}
+.l-social-item{
+	width: calc((100% - 20px * 6) / 6);	
+}
+.l-footer{
+	width: calc((100% - 20px * 1) / 1);	
+}
+}
+/* ------PANTALLA PC ------*/
+@media (min-width: 780px){
+
+.three-col-grid:after{
+	content:"";
+	display: table;
+	clear: both;
+}
+.column{
+	width: calc((100% - 20px * 12) / 12);
+	height: 80px;
+	margin-right: 10px;
+	margin-left:10px;
+	background: grey;
+	float: left;
+}
+.l-wrap{
+	max-width: 1140px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.grid-item{
+	margin-right: 10px;
+	margin-left: 10px;
+	float: left;
+	background-color: grey;
+	height: 200px;
+}
+.l-mapa-mental{
+	width: calc((100% - 20px * 1) / 1);
+}
+.l-description-section:after{
+	content:"";
+	display; table;
+	clear: both;
+}
+.l-description{
+	width: calc((100% - 20px * 2.4) / 2.4); 
+}
+.l-image{
+	width: calc((100% - 20px * 1.715) / 1.715);
+}
+.l-description-services:after{
+	content:"";
+	display: table;
+	clear: both;
+}
+.l-services{
+		width: calc((100% - 20px * 3) / 3);	
+}
+.l-portfolio-item{
+		width: calc((100% - 20px * 3) / 3);	
+}
+.l-input{
+	width: calc((100% - 20px * 2) / 2);	
+}.l-contact-form .l-input:nth-child(3),
+.l-contact-form .l-input:nth-child(4){
+		width: calc((100% - 20px * 2) / 2);	
+
+}
+.l-thanks-text{
+	width: calc((100% - 20px * 1) / 1);	
+}
+.l-social-item{
+	width: calc((100% - 20px * 6) / 6);	
+}
+.l-footer{
+	width: calc((100% - 20px * 1) / 1);	
+}
+}
