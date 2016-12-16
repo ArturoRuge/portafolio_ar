@@ -57,7 +57,7 @@ html{
 *:after{
 	box-sizing: inherit;
 }
-/*------ CELULARES ------------
+/*------ MOBILE ------------
 -------------------------------*/
 .l-wrap{
 	max-width: 480px;
@@ -66,17 +66,20 @@ html{
 }
 .grid-item{
 	margin: 10px 10px 20px;
-	background-color: grey;
-	height: 200px;
 }
-.l-mapa-mental,
+.l-mapa-mental{
+	width: calc((100% - 20px * 1) / 1);
+	height: 300px;
+}
+
 .l-description,
 .l-image,
 .l-services,
 .l-portfolio-item,
 .l-input,
 .l-thanks-text,
-.l-footer
+.l-footer,
+.l-intro-services
 {
 	width: calc((100% - 20px * 1) / 1);
 }
@@ -102,10 +105,13 @@ html{
 	margin-right: 10px;
 	margin-left: 10px;
 	float: left;
-	background-color: grey;
-	height: 200px;
 }
 .l-mapa-mental{
+	width: calc((100% - 20px * 1) / 1);
+	height: 350px;
+}
+.l-intro-services
+{
 	width: calc((100% - 20px * 1) / 1);
 }
 .l-description-section:after{
@@ -177,10 +183,13 @@ html{
 	margin-right: 10px;
 	margin-left: 10px;
 	float: left;
-	background-color: grey;
-	height: 200px;
 }
 .l-mapa-mental{
+	width: calc((100% - 20px * 1) / 1);
+	height: 500px;
+}
+
+.l-intro-services{
 	width: calc((100% - 20px * 1) / 1);
 }
 .l-description-section:after{
@@ -257,7 +266,7 @@ ul.topnav li.icon{
 
 
 /*-----maquetacion mobile -----*/
-@media (max-width: 480px){
+@media (max-width: 780px){
 	ul.topnav li{
 		display: none;
 	}
@@ -266,7 +275,7 @@ ul.topnav li.icon{
 		display: inline-block;
 	}
 }
-@media (max-width: 480px){
+@media (max-width: 780px){
 	ul.topnav.responsive {position: relative;}
 	ul.topnav.responsive li.icon{
 		position: absolute;
@@ -284,6 +293,36 @@ ul.topnav li.icon{
 	}
 
 }
+/*-------MAPA MENTAL-------*/
+.l-mapa-mental{
+	background-image: url(../img/mapa-mental-ar.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+/*-------SERVICES-------*/
+.l-intro-services{
+	text-align: center;
+}
+.description-service{
+	text-align: center;
+	background-color: #F2F2F2;
+	padding: 40px;
+}
+.description-service h3{
+	padding-bottom:20px;
+}
+/*---------CONTACT-----------*/
+.l-contact-form input,
+.l-contact-form textarea{
+	width: 100%;
+}
+.l-contact-form .grid-item{
+	
+}
+/*---------SOCIAL CONTACT------------*/
+.l-thanks-text{
+	text-align: center;
+}
 /*-------FOOTER------*/
 footer{
 	background-color: #333;
@@ -292,5 +331,6 @@ footer{
 footer p{
 	color: white;
 	text-align: center;
-	padding:40px;
+	padding:30px;
+
 }
