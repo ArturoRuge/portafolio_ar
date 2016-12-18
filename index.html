@@ -22,9 +22,9 @@
 				<nav>
 					<ul class="topnav" id="myTopnav">
 						<li><a class="active" href="#">Inicio</a></li>
-						<li><a href="#">Sobre Mi</a></li>
-						<li><a href="#">Portafolio</a></li>
-						<li><a href="#">Contactame</a></li>
+						<li><a href="#hola">Sobre Mi</a></li>
+						<li><a href="#portafolio">Portafolio</a></li>
+						<li><a href="#contactame">Contactame</a></li>
 						<li class="icon"> 
 							<a href="javascript:void(0);" style="font-size:15px;"onclick="myFunction()">&#9776;</a>
 						</li>
@@ -34,26 +34,39 @@
 		</header>
 			<section class="l-wrap">
 				<div class="l-mapa-mental grid-item">
+					<div class="fondo-mp">
+						<figure class="mp-pc">
+							<img src="img/pc_personaje_mp.png" alt="" class="pc-personaje">
+							<img class="pc-fondo" src="img/pc_fondo_mp.jpg" alt="">
+						</figure>
+						<figure class="mp-mobile">
+							<img src="img/mpersonaje_mapa_mental.png" alt="" class="personaje">
+							<img class="fondo" src="img/mfondo_mapa_mental.jpg" alt="">
+						</figure>
+						<div class="personaje-mp"></div>
+					</div>
 				</div>
 			</section>
 	<!-- ............ 
 	..................SERVICES...................-->
 			<section class="l-wrap">
 				<div class="l-description-section">
-					<div class="l-image grid-item">
+					<div class="l-image grid-item img-hola">
 						<img src="img/img_hola.jpg" width="100%">
 					</div>
-					<div class="l-description grid-item">
+					<div class="l-description grid-item" id="hola">
 						<h2>Hola!</h2>
-						<p>Mi nombre es Arturo Ruge y ahora estás navegando en mi espacio profesional.</p>
-						<p>Si estás interesado en saber lo que hago y en cómo le puedo aportar a tu marca… ¡Fantástico!, estás en el lugar correcto.</p>
+						<p>Mi nombre es <strong>Arturo Ruge</strong> y ahora estás navegando en mi espacio profesional.</p>
+						<p>Si estás interesado en saber lo que hago y en cómo le puedo aportar a tu marca… ¡Fantástico!, <span>estás en el lugar correcto.</span></p>
 					</div>
 				</div>
 			</section>
-			<section class="l-wrap">
-				<div class="l-intro-services grid-item">
-					<h3>Estos son los servicios que actualmente te puedo ofrecer.</h3>
-					<p>Dale un vistazo, seguro encontrarás lo que buscas.</p>
+			<section class="bg-description-services clearfix">
+				<div class="l-wrap">
+					<div class="l-intro-services grid-item">
+						<h3>Estos son los servicios que actualmente te puedo ofrecer.</h3>
+						<p>Dale un vistazo, seguro encontrarás lo que buscas.</p>
+					</div>
 				</div>
 			</section>
 		<section class="l-wrap l-description-services">
@@ -68,23 +81,23 @@
 					<img src="img/min_diseno.jpg" width="100%">
 					<div class="description-service">
 						<h3>Diseño</h3>
-						<p>Ya sea que estes pensando en realizar un poster,  un flyer o  la marca de tu próximo emprendimiento, te puedo asesorar para que lleves el mensaje correcto a tus clientes.</p>
+						<p>Ya sea que estes pensando en realizar un poster,  un flyer o  la marca de tu próximo emprendimiento, te puedo asesorar para plasmar tus ideas y así lleves el mensaje correcto a tus clientes.</p>
 					</div>
 				</article>
 				<article class="l-services grid-item">
 					<img src="img/min_ilustracion.jpg" width="100%">
 					<div class="description-service">
 						<h3>Ilustración</h3>
-						<p>Con una combinación entre dibujo y diseño, en mi trabajo de ilustración encontrarás la forma de plasmar tus ideas.</p>
+						<p>Con una combinación entre dibujo y diseño, junto con una variedad de estilos, en mi trabajo de ilustración encontrarás el complemento ideal para plasmar y fortalecer tus ideas a comunicar.</p>
 					</div>
 				</article>
 		</section>
 		<!-- ............ 
 	..................PORTAFOLIO..............-->
-		<section class="l-wrap">
+		<section class="l-wrap" id="portafolio">
 				<div class="l-description-section">
 					<div class="l-description grid-item">
-						<h2>Es el turno de presentar mi “Camello”</h2>
+						<h2>Ahora te presento mi “Camello”</h2>
 						<p>O así llamamos coloquialmente en Colombia al trabajo.
 Aquí te presento algunos de los proyectos en donde he tenido el gusto de participar</p>
 					</div>
@@ -93,79 +106,81 @@ Aquí te presento algunos de los proyectos en donde he tenido el gusto de partic
 					</div>
 				</div>
 		</section>
-		<section class="l-wrap">
-			<div class="l-portfolio-section">
-				<article class="l-portfolio-item grid-item">
-					<div class="project">
-						<a href="#"><img src="img/min_tropical_woods.jpg" alt="" width="100%"></a>
-					</div>
-					<div class="description-project">
-						<h3>Tropical Woods</h3>
-						<p>Diseño web, Diseño de marca.</p>
-					</div>
-				</article>
-				<article class="l-portfolio-item grid-item">
-					<div class="project">
-						<a href="#"><img src="img/min_fundisa.jpg" alt="" width="100%"></a>
-					</div>
-					<div class="description-project">
-						<h3>Fundisa Restauration Group</h3>
-						<p>Diseño web, Diseño de marca.</p>
-					</div>
-				</article>
-				<article class="l-portfolio-item grid-item">
-					<div class="project">
-						<a href="#"><img src="img/min_sabu.jpg" alt="" width="100%"></a>
-					</div>
-					<div class="description-project">
-						<h3>Sabu Latin Band</h3>
-						<p>Diseño de Marca, Edición de video.</p>
-					</div>
-				</article>
-				<article class="l-portfolio-item grid-item">
-					<div class="project">
-						<a href="#"><img src="img/min_gpe.jpg" alt="" width="100%">
-						</a>
-					</div>
-					<div class="description-project">
-						<h3>Gimnasio Pequeños explor.</h3>
-						<p>Diseño de marca, Ilustración.</p>
-					</div>
-				</article>
-				<article class="l-portfolio-item grid-item">
-					<div class="project">
-						<a href="#"><img src="img/min_dindong.jpg" alt="" width="100%"></a>
-					</div>
-					<div class="description-project">
-						<h3>Din Dong Mezze</h3>
-						<p>Diseño de Marca.</p>
-					</div>
-				</article>
-				<article class="l-portfolio-item grid-item">
-					<div class="project">
-						<a href="#"><img src="img/min_ruge_art.jpg" alt="" width="100%"></a>
-					</div>
-					<div class="description-project">
-						<h3>Ruge Art</h3>
-						<p>Ilustración.</p>
-					</div>
-				</article>
+		<section class="bg-portfolio-section clearfix">
+			<div class="l-wrap">
+				<div class="l-portfolio-section">
+					<article class="l-portfolio-item grid-item">
+						<div class="project">
+							<a href="#"><img src="img/min_tropical_woods.jpg" alt="" width="100%" class="a-scale"></a>
+						</div>
+						<div class="description-project">
+							<h3>Tropical Woods</h3>
+							<p>Diseño web, Diseño de marca.</p>
+						</div>
+					</article>
+					<article class="l-portfolio-item grid-item">
+						<div class="project">
+							<a href="#"><img src="img/min_fundisa.jpg" alt="" width="100%" class="a-scale"></a>
+						</div>
+						<div class="description-project">
+							<h3>Fundisa Restauration Group</h3>
+							<p>Diseño web, Diseño de marca.</p>
+						</div>
+					</article>
+					<article class="l-portfolio-item grid-item">
+						<div class="project">
+							<a href="#"><img src="img/min_sabu.jpg" alt="" width="100%" class="a-scale"></a>
+						</div>
+						<div class="description-project">
+							<h3>Sabu Latin Band</h3>
+							<p>Diseño de Marca, Edición de video.</p>
+						</div>
+					</article>
+					<article class="l-portfolio-item grid-item">
+						<div class="project">
+							<a href="#"><img src="img/min_gpe.jpg" alt="" width="100%" class="a-scale">
+							</a>
+						</div>
+						<div class="description-project">
+							<h3>Gimnasio Pequeños explor.</h3>
+							<p>Diseño de marca, Ilustración.</p>
+						</div>
+					</article>
+					<article class="l-portfolio-item grid-item">
+						<div class="project">
+							<a href="#"><img src="img/min_dindong.jpg" alt="" width="100%" class="a-scale"></a>
+						</div>
+						<div class="description-project">
+							<h3>Din Dong Mezze</h3>
+							<p>Diseño de Marca.</p>
+						</div>
+					</article>
+					<article class="l-portfolio-item grid-item">
+						<div class="project">
+							<a href="#"><img src="img/min_ruge_art.jpg" alt="" width="100%" class="a-scale"></a>
+						</div>
+						<div class="description-project">
+							<h3>Ruge Art</h3>
+							<p>Ilustración.</p>
+						</div>
+					</article>
+				</div>
 			</div>
 		</section>
 		<!-- ............ 
 	..................CONTACT.............-->
-		<article class="l-wrap">
-			<div class="l-description-section">
+		<article class="l-wrap" id="contactame">
+			<div class="l-description-section s-contact">
 				<div class="l-image grid-item">
 					<img src="img/img_charlemos.jpg" alt="" width="100%">
 				</div>
-				<div class="l-description grid-item">
+				<div class="l-description grid-item l-text-contact">
 					<h2>Charlemos!!</h2>
 					<p>Ya sea que tengas un proyecto en mente y quieras conversar, desees que te realice una cotización o simplemente quieras saludarme, !contactame!</p>
 
 					<p>Si eres de aquellos que les gusta enviar correos directamente, me puedes escribir a: </p>
 
-					<p>hola@arturoruge.com</p>
+					<p><span>hola@arturoruge.com</span></p>
 
 					<p>O si lo prefieres a la vieja escuela, diligencia este formulario, te estaré contactando super-mega-rápido! ;)</p>
 				</div>
@@ -174,16 +189,19 @@ Aquí te presento algunos de los proyectos en donde he tenido el gusto de partic
 		<div class="l-wrap">
 			<div class="l-contact-form">
 				<div class="l-input grid-item">
-					<input type="text" name="nombre">
+					<input type="text" name="nombre" placeholder="Nombre">
 				</div>
 				<div class="l-input grid-item">
-					<input type="email" name="email">
+					<input type="email" name="email" placeholder="E-mail">
 				</div>
 				<div class="l-input grid-item">
-					<textarea name="comentarios" id=""></textarea>
+					<textarea name="comentarios" id="comentarios" placeholder="Escribe aquí tu mensaje!"></textarea>
 				</div>
-				<div class="l-input grid-item">
-					<input type="submit">
+				<div class="l-input grid-item btn-submit">
+					<div class="carta">
+						<img src="img/btn_enviar.jpg" alt="">
+					</div>	
+					<input type="submit" class="a-scale">
 				</div>
 			</div>
 		</div>
@@ -196,10 +214,18 @@ Aquí te presento algunos de los proyectos en donde he tenido el gusto de partic
 		<div class="l-wrap">
 			<div class="l-social-links">
 				<div class="l-social-item grid-item"></div>
-				<div class="l-social-item grid-item"></div>
-				<div class="l-social-item grid-item"></div>
-				<div class="l-social-item grid-item"></div>
-				<div class="l-social-item grid-item"></div>
+				<div class="l-social-item grid-item">
+					<a href="#"><img src="img/btn_linkedin.svg" alt="" class="a-scale"></a>
+				</div>
+				<div class="l-social-item grid-item">
+					<a href="#"><img src="img/btn_behance.svg" alt="" class="a-scale"></a>
+				</div>
+				<div class="l-social-item grid-item">
+					<a href="#"><img src="img/btn_wordpress.svg" alt="" class="a-scale"></a>
+				</div>
+				<div class="l-social-item grid-item">
+					<a href="#"><img src="img/btn_github.svg" alt="" class="a-scale"></a>
+				</div>
 				<div class="l-social-item grid-item"></div>
 			</div>
 		</div>

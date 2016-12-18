@@ -58,9 +58,10 @@ html{
 	box-sizing: inherit;
 }
 body{
-	font: 85%/1.35 'Lora', serif;
+	font: 85%/1.5 'Lora', serif;
 	font-weight: 400;
 	text-align: left;
+	color: #4A4A4A;
 }
 h1{
 	font-size: 3.125em;
@@ -75,7 +76,20 @@ h3{
 	font-size: 1.7em;
 	font-weight: 700;	
 }
-/*------ MOBILE ------------
+.clearfix:after{
+	content:"";
+	display: table;
+	clear:both;
+}
+p{
+	margin-bottom:1em;
+}
+span,
+strong{
+	font-weight:700;
+}
+/*----------------------------
+----------- MOBILE ------------
 -------------------------------*/
 .l-wrap{
 	max-width: 480px;
@@ -90,12 +104,44 @@ h3{
 	float: left;
 	min-width: 8.75em;
 }
+/*---personaje----*/
 .l-mapa-mental{
 	width: calc((100% - 20px * 1) / 1);
-	height: 20em;
-	margin-bottom: 5.625em;
+	margin-bottom: 1em;
+	text-align: center;
 }
-
+.fondo-mp{
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 20em;
+	position:relative;
+}
+.mp-mobile .fondo{
+	position:absolute;
+	top: 60px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	z-index: 1;
+}
+.mp-mobile .personaje{
+	position:absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	z-index: 100;
+	animation: flotar 1.2s ease-in-out infinite alternate;
+}
+.l-mapa-mental .mp-pc{
+	display: none;
+}
+/*------------------------*/
+.img-hola{
+	display: none;
+}
 .l-description,
 .l-image,
 .l-services,
@@ -124,14 +170,24 @@ h3{
 	padding-bottom: 6.25em;
 }
 .l-portfolio-section{
-	padding-top: 4.375em;
+	padding-top: 9.375em;
 	padding-bottom: 9.375em;
 }
 .l-description-services{
 	padding-bottom: 9.375em;
 }
-
-/*------ PANTALLA TABLETS -----
+.l-social-links img{
+	width: 100%;
+	height: auto;
+}
+.s-contact .l-image{
+	padding-top: 0 !important;
+}
+.s-contact .l-description{
+	padding-top: 3em;
+}
+/*------ -----------------------
+----------PANTALLA TABLETS -----
 --------------------------------*/
 @media (min-width: 620px){
 body{
@@ -149,9 +205,43 @@ body{
 	margin-left: 10px;
 	float: left;
 }
+/*------PERSONAJE---*/
 .l-mapa-mental{
 	width: calc((100% - 20px * 1) / 1);
-	height: 23.333em;
+	height: 15em;
+	margin-bottom: 10em;
+}
+.l-mapa-mental .mp-pc{
+	display: initial;
+}
+.l-mapa-mental .mp-mobile{
+	display: none;
+}
+.mp-pc .pc-personaje{
+	position: absolute;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	z-index:100;
+	animation: flotar 1.3s ease-in-out infinite alternate;
+	width:14em;
+}
+.mp-pc .pc-fondo{
+	position: absolute;
+	top: -30px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	z-index: 1;
+	width: 100%;
+}
+
+/*--------------*/
+.img-hola{
+	display: initial;
 }
 .l-intro-services
 {
@@ -181,6 +271,9 @@ body{
 }
 .l-portfolio-item{
 		width: calc((100% - 20px * 2) / 2);	
+}
+.s-contact .l-description{
+	padding-top: 6em;
 }
 .l-input{
 	width: calc((100% - 20px * 2) / 2);	
@@ -235,9 +328,11 @@ body{
 }
 .l-mapa-mental{
 	width: calc((100% - 20px * 1) / 1);
+	margin-bottom: 25em;
+}
+.fondo-mp{
 	height: 31.25em;
 }
-
 .l-intro-services{
 	width: calc((100% - 20px * 1) / 1);
 }
@@ -258,14 +353,18 @@ body{
 	clear: both;
 }
 .l-services{
-		width: calc((100% - 20px * 3) / 3);	
+	width: calc((100% - 20px * 3) / 3);		
 }
 .l-portfolio-item{
 		width: calc((100% - 20px * 3) / 3);	
 }
+.s-contact .l-description{
+	padding-top: 7em;
+}
 .l-input{
 	width: calc((100% - 20px * 2) / 2);	
-}.l-contact-form .l-input:nth-child(3),
+}
+.l-contact-form .l-input:nth-child(3),
 .l-contact-form .l-input:nth-child(4){
 		width: calc((100% - 20px * 2) / 2);	
 
@@ -276,9 +375,14 @@ body{
 .l-social-item{
 	width: calc((100% - 20px * 6) / 6);	
 }
+.l-social-links img{
+	width: 50%;
+	height: auto;
+}
 .l-footer{
 	width: calc((100% - 20px * 1) / 1);	
 }
+
 }
 /*------------------------------
 		ESTILOS
@@ -349,14 +453,17 @@ ul.topnav li.icon{
 
 }
 /*-------MAPA MENTAL-------*/
-.l-mapa-mental{
-	background-image: url(../img/mapa-mental-ar.jpg);
-	background-size: contain;
-	background-repeat: no-repeat;
-}
+
 /*-------SERVICES-------*/
 .l-intro-services{
 	text-align: center;
+}
+.bg-description-services{
+	background-color: #F5D923;
+	background: -webkit-linear-gradient(#F5D923, #fff);
+	background: -moz-linear-gradient(#F5D923, #fff);
+	background: -o-linear-gradient(#F5D923, #fff);
+	background: linear-gradient(#F5D923, #fff);
 }
 .description-service{
 	text-align: center;
@@ -366,17 +473,59 @@ ul.topnav li.icon{
 .description-service h3{
 	padding-bottom:20px;
 }
+.l-description-section .l-image{
+	margin-bottom: 0 !important;
+}
+/*---------PORTFOLIO----------*/
+.l-description-section{
+	vertical-align:bottom;
+}
+.bg-portfolio-section{
+	background: #6CE6C5;
+	background: -webkit-linear-gradient(#6CE6C5, #fff, #fff,  #fff, #6CE6C5);
+	background: -moz-linear-gradient(#6CE6C5, #fff, #fff, #fff, #6CE6C5);
+	background: -o-linear-gradient(#6CE6C5, #fff, #fff, #fff, #6CE6C5);
+	background: linear-gradient(#6CE6C5, #fff, #fff, #fff, #6CE6C5);
+}
 
 /*---------CONTACT-----------*/
 .l-contact-form input,
 .l-contact-form textarea{
 	width: 100%;
+	border: 0;
+	padding:1em;
+	font-size:1em;
 }
-.l-contact-form .grid-item{
-	
+#comentarios{
+	height:10em;
+}
+.l-input{
+	border: 1px solid #E4E4E4;
+	border-radius: 0.3em;
+	height: auto;
+}
+.l-contact-form div:last-child{
+	border: none;
+	text-align: center;
+}
+.l-contact-form [type="submit"]{
+	width:40%;
+	border-radius: 0.3em;
+	margin-top: 1em;
+}
+.btn-submit{
+	line-height: 3em;
+}
+.carta{
+	margin-top:1em;
 }
 /*---------SOCIAL CONTACT------------*/
 .l-thanks-text{
+	text-align: center;
+	padding-top: 6.25em;
+}
+.l-social-links{
+	padding-bottom: 6.25em;
 	text-align: center;
 }
 /*-------FOOTER------*/
@@ -389,5 +538,22 @@ footer p{
 	text-align: center;
 	padding:30px;
 	font-size: .8em;
+
+}
+/*----------ANIMATIONS----------*/
+.a-scale{
+	transition: all 1s ease;
+}
+.a-scale:hover{
+	transform: scale(1.05);
+	box-shadow: 2px 2px 5px grey;
+}
+@keyframes flotar{
+	from{
+		top: 0;
+	}
+	to{
+		top: -20px;
+	}
 
 }
