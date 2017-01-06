@@ -1,54 +1,10 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 /*---------------------------------
 		GRID System
 -----------------------------------*/
+*{
+	margin:0;
+	padding:0;
+}
 html{
 	box-sizing: border-box;
 }
@@ -96,13 +52,46 @@ strong{
 	margin-right: auto;
 	margin-left: auto;
 }
-.grid-item{
+.grid-item,
+.grid-col-item{
 	margin: 10px 10px 20px;
 }
 .l-logo{
-	width: calc((100% - 20px * 6) / 6);
-	float: left;
-	min-width: 8.75em;
+	width: calc((100% - 20px * 4) / 4);
+}
+header{
+	height: auto;
+	background-color:#333;
+}
+.l-logo{
+	margin-top: 0;
+}
+.l-logo{
+	display: block;
+	margin: 0 auto;	
+	text-align: center;
+}
+.topnav,
+.topnav li{
+	display:block;
+	background-color: #333;
+	text-align: center;
+	width: 100%;
+	border-bottom: 1px solid #CCCCCC;
+}
+.topnav li:last-child{
+	border: 0;
+}
+.topnav a{
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	line-height: 3em;
+	font-weight: 900;
+}
+.topnav a:hover{
+	background-color: #CCCCCC;
+	color: #333;
 }
 /*---personaje----*/
 .l-mapa-mental{
@@ -145,7 +134,7 @@ strong{
 .l-description,
 .l-image,
 .l-services,
-.l-portfolio-item,
+.l-col-portfolio,
 .l-input,
 .l-thanks-text,
 .l-footer,
@@ -172,6 +161,9 @@ strong{
 .l-portfolio-section{
 	padding-top: 9.375em;
 	padding-bottom: 9.375em;
+}
+.l-portfolio-item{
+	margin: 1.5em 0;
 }
 .l-description-services{
 	padding-bottom: 9.375em;
@@ -204,6 +196,48 @@ body{
 	margin-right: 10px;
 	margin-left: 10px;
 	float: left;
+}
+.grid-col-item{
+	margin-right: 10px;
+	margin-left: 10px;
+	float: left;
+}
+/*--------MENU-------*/
+.l-logo{
+	width: calc((100% - 20px * 6) / 6);
+}
+header{
+	height: 5em;
+	margin-bottom: 3em;
+}
+
+.l-logo{
+	margin-top: 0;
+	display: inline-block;
+}
+nav{
+	text-align: right;
+}
+.topnav,
+.topnav li{
+	display:inline-block;
+	background-color: #333;
+	text-align: center;
+	width: auto;
+	border-bottom: 0;
+}
+.topnav a{
+	color: #fff;
+	text-decoration: none;
+	display: inline-block;
+	line-height: 5em;
+	font-weight: 400;
+	padding: 0 1em;
+
+}
+.topnav a:hover{
+	background-color: #CCCCCC;
+	color: #333;
 }
 /*------PERSONAJE---*/
 .l-mapa-mental{
@@ -242,6 +276,7 @@ body{
 /*--------------*/
 .img-hola{
 	display: initial;
+
 }
 .l-intro-services
 {
@@ -269,9 +304,18 @@ body{
 .l-services{
 		width: calc((100% - 20px * 3) / 3);	
 }
-.l-portfolio-item{
+.l-last-portfolio-item{
+		width: calc((100% - 20px * 2) / 2);	
+		margin-right: 10px;
+		margin-left: 10px;
+		float:left;
+}
+.l-col-portfolio{
 		width: calc((100% - 20px * 2) / 2);	
 }
+.l-last-col-portfolio{
+		width: calc((100% - 20px * 1) / 1);
+} 
 .s-contact .l-description{
 	padding-top: 6em;
 }
@@ -281,7 +325,6 @@ body{
 .l-contact-form .l-input:nth-child(3),
 .l-contact-form .l-input:nth-child(4){
 		width: calc((100% - 20px * 1) / 1);	
-
 }
 .l-thanks-text{
 	width: calc((100% - 20px * 1) / 1);	
@@ -302,7 +345,6 @@ body{
 	font-weight: 400;
 	text-align: left;
 }
-
 .three-col-grid:after{
 	content:"";
 	display: table;
@@ -322,6 +364,11 @@ body{
 	margin-left: auto;
 }
 .grid-item{
+	margin-right: 10px;
+	margin-left: 10px;
+	float: left;
+}
+.grid-col-item{
 	margin-right: 10px;
 	margin-left: 10px;
 	float: left;
@@ -356,7 +403,17 @@ body{
 	width: calc((100% - 20px * 3) / 3);		
 }
 .l-portfolio-item{
-		width: calc((100% - 20px * 3) / 3);	
+/*		width: calc((100% - 20px * 3) / 3);	*/
+}
+.l-col-portfolio,
+.l-last-col-portfolio{
+	width: calc((100% - 20px * 3) / 3);		
+}
+.l-last-portfolio-item{
+		width: calc((100% - 20px * 1) / 1);	
+		margin-right: 10px;
+		margin-left: 10px;
+		float:left;
 }
 .s-contact .l-description{
 	padding-top: 7em;
@@ -388,86 +445,26 @@ body{
 		ESTILOS
 --------------------------------*/
 /*-------Cabecera----*/
-header{
-	height: 6.25em;
-	background-color:#333;
 
-}
-.l-logo{
-	margin-top: 0;
-}
+header,
 .l-logo img{
-
+	box-shadow: 2px 2px 2px grey;
 }
-/*--------Navegacion---------*/
-ul.topnav{
-	overflow: hidden;
-	background-color:#333;
-}
-ul.topnav li{
-	float:right;
-}
-ul.topnav li a{
-	display: inline-block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 3em 1em 1em;
-	text-decoration: none;
-	transition: 0.3s;
-	font-size: .9em;
-}
-ul.topnav li a:hover{
-	background-color: #555;
-}
-ul.topnav li.icon{
-	display: none;
-}
-
-
-/*-----maquetacion mobile -----*/
-@media (max-width: 780px){
-	ul.topnav li{
-		display: none;
-	}
-	ul.topnav li.icon{
-		float: right;
-		display: inline-block;
-	}
-}
-@media (max-width: 780px){
-	ul.topnav.responsive {position: relative;}
-	ul.topnav.responsive li.icon{
-		position: absolute;
-		right:0;
-		top:0;
-	}
-	ul.topnav.responsive li{
-		float: none;
-		display: inline;
-	}
-	ul.topnav.responsive li a{
-		display: block;
-		text-align: left;
-		padding: 17px 16px;
-	}
-
-}
-/*-------MAPA MENTAL-------*/
-
 /*-------SERVICES-------*/
 .l-intro-services{
 	text-align: center;
 }
 .bg-description-services{
-	background-color: #F5D923;
-	background: -webkit-linear-gradient(#F5D923, #fff);
-	background: -moz-linear-gradient(#F5D923, #fff);
-	background: -o-linear-gradient(#F5D923, #fff);
-	background: linear-gradient(#F5D923, #fff);
+	background-color: #FDF9DA;
+	background: -webkit-linear-gradient(#FDF9DA, #fff);
+	background: -moz-linear-gradient(#FDF9DA, #fff);
+	background: -o-linear-gradient(#FDF9DA, #fff);
+	background: linear-gradient(#FDF9DA, #fff);
+	position: relative;
+	z-index: 100;
 }
 .description-service{
 	text-align: center;
-	background-color: #F2F2F2;
 	padding: 2.5em;
 }
 .description-service h3{
@@ -482,12 +479,23 @@ ul.topnav li.icon{
 }
 .bg-portfolio-section{
 	background: #6CE6C5;
-	background: -webkit-linear-gradient(#6CE6C5, #fff, #fff,  #fff, #6CE6C5);
-	background: -moz-linear-gradient(#6CE6C5, #fff, #fff, #fff, #6CE6C5);
-	background: -o-linear-gradient(#6CE6C5, #fff, #fff, #fff, #6CE6C5);
-	background: linear-gradient(#6CE6C5, #fff, #fff, #fff, #6CE6C5);
+	background: -webkit-linear-gradient(#DDF9F2, #fff, #fff,  #fff, #DDF9F2);
+	background: -moz-linear-gradient(#DDF9F2, #fff, #fff, #fff, #DDF9F2);
+	background: -o-linear-gradient(#DDF9F2, #fff, #fff, #fff, #DDF9F2);
+	background: linear-gradient(#DDF9F2, #fff, #fff, #fff, #DDF9F2);
+	position: relative;
+	z-index: 100;
 }
-
+.description-project{
+	background-color: #fff;
+	/*border: 1px solid grey;*/
+	padding: .5em;
+}
+.project  a{
+	height: auto;
+	background: #dadada;
+	padding-bottom:3px;
+}
 /*---------CONTACT-----------*/
 .l-contact-form input,
 .l-contact-form textarea{
@@ -512,12 +520,23 @@ ul.topnav li.icon{
 	width:40%;
 	border-radius: 0.3em;
 	margin-top: 1em;
+	cursor: pointer;
+	background: #c1c1c1;
 }
 .btn-submit{
-	line-height: 3em;
+	line-height: 1em;
 }
 .carta{
-	margin-top:1em;
+	
+	position: relative;
+	top:0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 1.2em auto;
+	z-index:100;
+	animation: flotar 1.3s ease-in-out infinite alternate;
+	width:14em;
 }
 /*---------SOCIAL CONTACT------------*/
 .l-thanks-text{
@@ -538,15 +557,37 @@ footer p{
 	text-align: center;
 	padding:30px;
 	font-size: .8em;
+	margin-bottom: 0;
 
 }
 /*----------ANIMATIONS----------*/
 .a-scale{
-	transition: all 1s ease;
+	transition: all .5s ease;
 }
 .a-scale:hover{
-	transform: scale(1.05);
-	box-shadow: 2px 2px 5px grey;
+	transform: scale(1.03);
+	box-shadow: 2px 2px 5px #cdcdcd, -2px 2px 5px #cdcdcd;
+}
+.a-scale-link{
+	transition: all .5s ease;
+	filter: saturate(.3);
+}
+.a-scale-link:hover{
+	transform: scale(1.01);
+	-webkit-filter: drop-shadow 2px 2px 5px #cdcdcd, -2px 2px 5px #cdcdcd;
+	filter: drop-shadow(-2px 2px 5px #cdcdcd);
+}
+.a-scale-btn{
+	transition: all .5s ease;
+}
+.a-scale-btn:hover{
+	transform: scale(1.03);
+	box-shadow: 2px 2px 5px #cdcdcd, -2px 2px 5px #cdcdcd;
+	background: #72E6C1;
+	background: -webkit-linear-gradient(#EDDA3D, #72E6C1);
+	background: -o-linear-gradient(#EDDA3D, #72E6C1);
+	background: -moz-linear-gradient(#EDDA3D, #72E6C1);
+	background: linear-gradient(#EDDA3D, #72E6C1);
 }
 @keyframes flotar{
 	from{
@@ -555,5 +596,27 @@ footer p{
 	to{
 		top: -20px;
 	}
-
+}
+.aparecer,
+.aparecer2,
+.aparecer3{
+	opacity: 0;
+	position: relative;
+	z-index:0;
+}
+.arrow_cont{
+	width: 100px;
+	height: 100px;
+	background-color: yellow;
+	position: absolute;
+	z-index: 200;
+	top: 50%;
+	left: 50%;
+}
+.arrow{
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	filter: opacity(50%);
 }

@@ -6,28 +6,33 @@
 		<title>Arturo Ruge - Diseño y Desarrollo web</title>
 		<meta name="description" content="">
 		<meta name="author" content="Arturo Ruge">
-		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Sigmar+One" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Lora:400,700|Sigmar+One" rel="stylesheet">
+		<link rel="stylesheet" href="css/normalize.css"> 
+		<link rel="stylesheet" href="css/animate.min.css">
 		<link href="css/estilos.css" rel="stylesheet">
+		<!-- :::::::JS :::::::::-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/jquery.waypoints.js"></script>
 		<script src="js/actions.js"></script>
+		<!--[if lt IE 9]> 
+			<script src="js/html5shiv.js"></script> 
+		<[endif]-->
 	</head>
 
 	<body>
 	<!-- ............ 
 	..................CABECERA...............-->
-		<header>
+		<header class="clearfix">
 			<div class="l-wrap">
 				<div class="l-logo grid-item">
 					<a href="#"><img src="img/logo_ar.png" alt="logo arturo ruge" width="100%"></a>
 				</div>
 				<nav>
 					<ul class="topnav" id="myTopnav">
-						<li><a class="active" href="#">Inicio</a></li>
+						<li><a href="#">Inicio</a></li>
 						<li><a href="#hola">Sobre Mi</a></li>
 						<li><a href="#portafolio">Portafolio</a></li>
 						<li><a href="#contactame">Contactame</a></li>
-						<li class="icon"> 
-							<a href="javascript:void(0);" style="font-size:15px;"onclick="myFunction()">&#9776;</a>
-						</li>
 					</ul>
 				</nav>
 			</div>
@@ -36,15 +41,16 @@
 				<div class="l-mapa-mental grid-item">
 					<div class="fondo-mp">
 						<figure class="mp-pc">
-							<img src="img/pc_personaje_mp.png" alt="" class="pc-personaje">
-							<img class="pc-fondo" src="img/pc_fondo_mp.jpg" alt="">
+							<img src="img/pc_personaje_mp.png" alt="Avatar Arturo Ruge" class="pc-personaje">
+							<img class="pc-fondo  animated fadeIn" src="img/pc_fondo_mp.jpg" alt="Fondo mapa mental - publicista - diseño, desarrollo web e ilustración">
 						</figure>
 						<figure class="mp-mobile">
-							<img src="img/mpersonaje_mapa_mental.png" alt="" class="personaje">
-							<img class="fondo" src="img/mfondo_mapa_mental.jpg" alt="">
+							<img src="img/mpersonaje_mapa_mental.png" alt="Avatar Arturo Ruge" class="personaje">
+							<img class="fondo  animated fadeIn" src="img/mfondo_mapa_mental.jpg" alt="fondo avatar">
 						</figure>
-						<div class="personaje-mp"></div>
 					</div>
+					<div class="arrow-cont"><a href="#hola"><img src="img/arrow.jpg" alt="arrow" class="arrow animated fadeInDown"></a></div>
+
 				</div>
 			</section>
 	<!-- ............ 
@@ -52,12 +58,12 @@
 			<section class="l-wrap">
 				<div class="l-description-section">
 					<div class="l-image grid-item img-hola">
-						<img src="img/img_hola.jpg" width="100%">
+						<img src="img/img_hola.gif" width="100%" class="animated aparecer" alt="sobre mi, arturo ruge publicista">
 					</div>
 					<div class="l-description grid-item" id="hola">
 						<h2>Hola!</h2>
-						<p>Mi nombre es <strong>Arturo Ruge</strong> y ahora estás navegando en mi espacio profesional.</p>
-						<p>Si estás interesado en saber lo que hago y en cómo le puedo aportar a tu marca… ¡Fantástico!, <span>estás en el lugar correcto.</span></p>
+						<p>Mi nombre es <strong>Arturo Ruge</strong>, soy un publicista apasionado por el arte de la comunicación y el mundo digital.</p>
+						<p>Ahora estás navegando en mi espacio profesional; Si estás interesado en saber lo que hago y en cómo le puedo aportar a tu marca… ¡Fantástico! <span>estás en el lugar correcto.</span></p>
 					</div>
 				</div>
 			</section>
@@ -71,28 +77,28 @@
 			</section>
 		<section class="l-wrap l-description-services">
 				<article class="l-services grid-item">
-					<img src="img/min_web.jpg" width="100%">
+					<img src="img/min_web.jpg" alt="servicio de desarrollo web" width="100%">
 					<div class="description-service">
 						<h3>Aplicación Web</h3>
 						<p>Pensada para ser mobile first, tu página tendrá un tiempo óptimo de carga, seguirá tu objetivo de comunicación y se adaptará perfectamente a cualquier pantalla, ya sea PC, tableta o celular.</p>
 					</div>
 				</article>
 				<article class="l-services grid-item">
-					<img src="img/min_diseno.jpg" width="100%">
+					<img src="img/min_diseno.jpg" alt="servicio de diseño" width="100%">
 					<div class="description-service">
 						<h3>Diseño</h3>
 						<p>Ya sea que estes pensando en realizar un poster,  un flyer o  la marca de tu próximo emprendimiento, te puedo asesorar para plasmar tus ideas y así lleves el mensaje correcto a tus clientes.</p>
 					</div>
 				</article>
 				<article class="l-services grid-item">
-					<img src="img/min_ilustracion.jpg" width="100%">
+					<img src="img/min_ilustracion.jpg" alt="servicio de ilustración" width="100%">
 					<div class="description-service">
 						<h3>Ilustración</h3>
 						<p>Con una combinación entre dibujo y diseño, junto con una variedad de estilos, en mi trabajo de ilustración encontrarás el complemento ideal para plasmar y fortalecer tus ideas a comunicar.</p>
 					</div>
 				</article>
 		</section>
-		<!-- ............ 
+		<!-- ::::::::::::::::::::::::::::::::::: 
 	..................PORTAFOLIO..............-->
 		<section class="l-wrap" id="portafolio">
 				<div class="l-description-section">
@@ -102,68 +108,80 @@
 Aquí te presento algunos de los proyectos en donde he tenido el gusto de participar</p>
 					</div>
 					<div class="l-image grid-item">
-						<img src="img/img_camello.jpg" width="100%">
+						<img src="img/img_camello.gif" alt="portafolio de trabajo de arturo ruge" width="100%" class="animated aparecer2">
 					</div>
 				</div>
 		</section>
 		<section class="bg-portfolio-section clearfix">
 			<div class="l-wrap">
 				<div class="l-portfolio-section">
-					<article class="l-portfolio-item grid-item">
-						<div class="project">
-							<a href="#"><img src="img/min_tropical_woods.jpg" alt="" width="100%" class="a-scale"></a>
-						</div>
-						<div class="description-project">
-							<h3>Tropical Woods</h3>
-							<p>Diseño web, Diseño de marca.</p>
-						</div>
-					</article>
-					<article class="l-portfolio-item grid-item">
-						<div class="project">
-							<a href="#"><img src="img/min_fundisa.jpg" alt="" width="100%" class="a-scale"></a>
-						</div>
-						<div class="description-project">
-							<h3>Fundisa Restauration Group</h3>
-							<p>Diseño web, Diseño de marca.</p>
-						</div>
-					</article>
-					<article class="l-portfolio-item grid-item">
-						<div class="project">
-							<a href="#"><img src="img/min_sabu.jpg" alt="" width="100%" class="a-scale"></a>
-						</div>
-						<div class="description-project">
-							<h3>Sabu Latin Band</h3>
-							<p>Diseño de Marca, Edición de video.</p>
-						</div>
-					</article>
-					<article class="l-portfolio-item grid-item">
-						<div class="project">
-							<a href="#"><img src="img/min_gpe.jpg" alt="" width="100%" class="a-scale">
-							</a>
-						</div>
-						<div class="description-project">
-							<h3>Gimnasio Pequeños explor.</h3>
-							<p>Diseño de marca, Ilustración.</p>
-						</div>
-					</article>
-					<article class="l-portfolio-item grid-item">
-						<div class="project">
-							<a href="#"><img src="img/min_dindong.jpg" alt="" width="100%" class="a-scale"></a>
-						</div>
-						<div class="description-project">
-							<h3>Din Dong Mezze</h3>
-							<p>Diseño de Marca.</p>
-						</div>
-					</article>
-					<article class="l-portfolio-item grid-item">
-						<div class="project">
-							<a href="#"><img src="img/min_ruge_art.jpg" alt="" width="100%" class="a-scale"></a>
-						</div>
-						<div class="description-project">
-							<h3>Ruge Art</h3>
-							<p>Ilustración.</p>
-						</div>
-					</article>
+					
+					<div class="l-col-portfolio grid-col-item">
+						<article class="l-portfolio-item">
+							<div class="project  a-scale">
+								<a href="#"><img src="img/min_tropical_woods.jpg" alt="proyecto Tropical Woods, diseño de marca y desarrollo web" width="100%"></a>
+							</div>
+							<div class="description-project">
+								<h3>Tropical Woods</h3>
+								<p>Diseño web, Diseño de marca.</p>
+							</div>
+						</article>
+						<article class="l-portfolio-item">
+							<div class="project  a-scale">
+								<a href="#"><img src="img/min_gpe.jpg" alt="" width="100%">
+								</a>
+							</div>
+							<div class="description-project">
+								<h3>Gim. exploradores</h3>
+								<p>Diseño de marca, Ilustración.</p>
+							</div>
+						</article>
+					</div>
+
+					<div class="l-col-portfolio grid-col-item">
+						<article class="l-portfolio-item">
+							<div class="project a-scale">
+								<a href="#"><img src="img/min_fundisa.jpg" alt="" width="100%"></a>
+							</div>
+							<div class="description-project">
+								<h3>Fundisa Restauration</h3>
+								<p>Diseño web, Diseño de marca.</p>
+							</div>
+						</article>
+						<article class="l-portfolio-item">
+							<div class="project  a-scale">
+								<a href="#"><img src="img/min_dindong.jpg" alt="" width="100%"></a>
+							</div>
+							<div class="description-project">
+								<h3>Din Dong Mezze</h3>
+								<p>Diseño de Marca.</p>
+							</div>
+						</article>
+					</div>
+
+					<div class="l-col-portfolio l-last-col-portfolio grid-col-item">
+						<article class="l-portfolio-item l-last-portfolio-item">
+							<div class="project a-scale">
+								<a href="#"><img src="img/min_sabu.jpg" alt="" width="100%"></a>
+							</div>
+							<div class="description-project">
+								<h3>Sabu Latin Band</h3>
+								<p>Diseño de Marca, Edición de video.</p>
+							</div>
+						</article>
+						<article class="l-portfolio-item l-last-portfolio-item">
+							<div class="project a-scale">
+								<a href="#"><img src="img/min_ruge_art.jpg" alt="" width="100%"></a>
+							</div>
+							<div class="description-project">
+								<h3>Ruge Art</h3>
+								<p>Ilustración.</p>
+							</div>
+						</article>
+					</div>
+
+					
+					
 				</div>
 			</div>
 		</section>
@@ -172,7 +190,7 @@ Aquí te presento algunos de los proyectos en donde he tenido el gusto de partic
 		<article class="l-wrap" id="contactame">
 			<div class="l-description-section s-contact">
 				<div class="l-image grid-item">
-					<img src="img/img_charlemos.jpg" alt="" width="100%">
+					<img src="img/img_charlemos.gif" alt="" width="100%" class="animated aparecer3">
 				</div>
 				<div class="l-description grid-item l-text-contact">
 					<h2>Charlemos!!</h2>
@@ -198,10 +216,10 @@ Aquí te presento algunos de los proyectos en donde he tenido el gusto de partic
 					<textarea name="comentarios" id="comentarios" placeholder="Escribe aquí tu mensaje!"></textarea>
 				</div>
 				<div class="l-input grid-item btn-submit">
-					<div class="carta">
+					<div class="carta ">
 						<img src="img/btn_enviar.jpg" alt="">
 					</div>	
-					<input type="submit" class="a-scale">
+					<input type="submit" class="a-scale-btn">
 				</div>
 			</div>
 		</div>
@@ -215,16 +233,16 @@ Aquí te presento algunos de los proyectos en donde he tenido el gusto de partic
 			<div class="l-social-links">
 				<div class="l-social-item grid-item"></div>
 				<div class="l-social-item grid-item">
-					<a href="#"><img src="img/btn_linkedin.svg" alt="" class="a-scale"></a>
+					<a href="#"><img src="img/btn_linkedin.png" alt="" class="a-scale-link"></a>
 				</div>
 				<div class="l-social-item grid-item">
-					<a href="#"><img src="img/btn_behance.svg" alt="" class="a-scale"></a>
+					<a href="#"><img src="img/btn_behance.png" alt="" class="a-scale-link"></a>
 				</div>
 				<div class="l-social-item grid-item">
-					<a href="#"><img src="img/btn_wordpress.svg" alt="" class="a-scale"></a>
+					<a href="#"><img src="img/btn_wordpress.png" alt="" class="a-scale-link"></a>
 				</div>
 				<div class="l-social-item grid-item">
-					<a href="#"><img src="img/btn_github.svg" alt="" class="a-scale"></a>
+					<a href="#"><img src="img/btn_github.png" alt="" class="a-scale-link"></a>
 				</div>
 				<div class="l-social-item grid-item"></div>
 			</div>
