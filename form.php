@@ -1,32 +1,43 @@
 <?php
-if(isset($_POST['email'])) {
 
-// Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
-$email_to = "arturoruge@gmail.com";
-$email_subject = "Contacto arturoruge.com";
+$nombre = $_POST['nombre'];
+$email = $_POST['email'];
+$comentarios = $_POST['comentarios'];
 
-// Aquí se deberían validar los datos ingresados por el usuario
-if(!isset($_POST['nombre']) ||
-!isset($_POST['email']) ||
-!isset($_POST['comentarios'])  {
+	ini_set('sendmail_from', 'hola@arturoruge.com');
 
-echo "<b>Ocurrió un error y el formulario no ha sido enviado. </b><br />";
-echo "Por favor, vuelva atrás y verifique la información ingresada<br />";
-die();
-}
+	  //Asunto
+	 $asunto = "Correo Enviado desde arturoruge.com";
 
-$email_message = "Detalles del formulario de contacto:\n\n";
-$email_message .= "Nombre: " . $_POST['nombre'] . "\n";
-$email_message .= "E-mail: " . $_POST['email'] . "\n";
-$email_message .= "Comentarios: " . $_POST['comentarios'] . "\n";
+	 //Correo del destinatario
+	 $para = $correo; 
 
+	 //Cuerpo
+	 $contenido = "	<html>
+						<center><body>
+							<div style='background-color : #B7D6D1;'>
+								<img src='http://arturoruge.com/img/logo_ar.png' href='http://www.arturoruge.com' alt='Arturo Ruge'/>
+							</div>";
 
-// Ahora se envía el e-mail usando la función mail() de PHP
-$headers = 'From: '.$email_from."\r\n".
-'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-@mail($email_to, $email_subject, $email_message, $headers);
+	 $contenido .= "<p>Hola <span style='color : #B7D6D1; font-weight : bold;'>Los datos de contacto son:!</span><br><br>
+				    Nombre: ".$nombre."<br>
+				    Email: ".$email."<br>
+				    Comentarios: ".$comentarios."<br>
+				   
+				    <small style='color : #FEC8D6;'>Este email fue enviado con php</small></p>
+				    </body></center>
+				    </html>";
 
-echo "¡El formulario se ha enviado con exito!";
-}
-?>
+	 //Cabecera
+	 $cabecera = "From: $nombre \r\n"; //Remitente
+     $cabecera .= "Bcc: arturoruge@gmail.com, hola@arturoruge.com\r\n"; //Copia oculta
+	 $cabecera .= "Content-type: text/html; charset=UTF-8\r\n";
+	               
+	 // Enviar mail
+	$resultado= mail($para, $asunto, $contenido, $cabecera);
+	if($resultado){
+                echo "Tu mail ha sido enviado exitosamente. Espera mi mail, te estare escribiendo lo más pronto posible!!!!.";
+		
+	}else{
+		echo "Ocurrió un problema al enviar el mail, intenta más tarde por favor";
+	}
