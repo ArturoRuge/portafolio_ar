@@ -168,6 +168,23 @@ header{
 .l-description-services{
 	padding-bottom: 9.375em;
 }
+.carta{
+	position: relative;
+}
+.carta img:first-child{
+	position: absolute;
+	left: 1.5em;
+	animation: lef-wing 1.3s ease-in infinite alternate;
+}
+.carta img:nth-child(2){
+	position: absolute;
+	right: 1em;
+	animation: rig-wing 1.3s ease-in infinite alternate;
+}
+.carta img:last-child{
+	position: absolute;
+	left: 4.5em;
+}
 .l-social-links img{
 	width: 100%;
 	height: auto;
@@ -326,6 +343,20 @@ nav{
 .l-contact-form .l-input:nth-child(4){
 		width: calc((100% - 20px * 1) / 1);	
 }
+.carta img:first-child{
+	position: absolute;
+	left: 1.8em;
+	animation: lef-wing 1.3s ease-in infinite alternate;
+}
+.carta img:nth-child(2){
+	position: absolute;
+	right: 1.8em;
+	animation: rig-wing 1.3s ease-in infinite alternate;
+}
+.carta img:last-child{
+	position: absolute;
+	left: 4.5em;
+}
 .l-thanks-text{
 	width: calc((100% - 20px * 1) / 1);	
 }
@@ -426,6 +457,20 @@ nav{
 		width: calc((100% - 20px * 2) / 2);	
 
 }
+.carta img:first-child{
+	position: absolute;
+	left: 2.1em;
+	animation: lef-wing 1.3s ease-in infinite alternate;
+}
+.carta img:nth-child(2){
+	position: absolute;
+	right: 2.3em;
+	animation: rig-wing 1.3s ease-in infinite alternate;
+}
+.carta img:last-child{
+	position: absolute;
+	left: 4.5em;
+}
 .l-thanks-text{
 	width: calc((100% - 20px * 1) / 1);	
 }
@@ -454,6 +499,7 @@ header,
 .l-intro-services{
 	text-align: center;
 }
+
 .bg-description-services{
 	background-color: #FDF9DA;
 	background: -webkit-linear-gradient(#FDF9DA, #fff);
@@ -467,8 +513,8 @@ header,
 	text-align: center;
 	padding: 2.5em;
 }
-.description-service h3{
-	padding-bottom:20px;
+.description-service img{
+	padding-bottom: 20px;
 }
 .l-description-section .l-image{
 	margin-bottom: 0 !important;
@@ -490,6 +536,12 @@ header,
 	background-color: #fff;
 	/*border: 1px solid grey;*/
 	padding: .5em;
+}
+.description-project:before{
+	content: url(../img/mano.png);
+	float: left;
+	margin-right: .6em;
+	margin-top: .5em;
 }
 .project  a{
 	height: auto;
@@ -537,6 +589,7 @@ header,
 	z-index:100;
 	animation: flotar 1.3s ease-in-out infinite alternate;
 	width:14em;
+	height: 3em;
 }
 /*---------SOCIAL CONTACT------------*/
 .l-thanks-text{
@@ -565,16 +618,15 @@ footer p{
 	transition: all .5s ease;
 }
 .a-scale:hover{
-	transform: scale(1.03);
+	transform: scale(1.01);
 	box-shadow: 2px 2px 5px #cdcdcd, -2px 2px 5px #cdcdcd;
 }
 .a-scale-link{
 	transition: all .5s ease;
-	filter: saturate(.3);
 }
 .a-scale-link:hover{
 	transform: scale(1.01);
-	-webkit-filter: drop-shadow 2px 2px 5px #cdcdcd, -2px 2px 5px #cdcdcd;
+	-webkit-filter: drop-shadow 2px 2px 5px #cdcdcd;
 	filter: drop-shadow(-2px 2px 5px #cdcdcd);
 }
 .a-scale-btn{
@@ -595,6 +647,22 @@ footer p{
 	}
 	to{
 		top: -20px;
+	}
+}
+@keyframes lef-wing{
+	from{
+		transform-origin: 100% 50%;
+		transform: rotate(20grad);
+	}
+	to{
+	}
+}
+@keyframes rig-wing{
+	from{
+		transform-origin: 3% 50%;
+		transform: rotate(-20grad);
+	}
+	to{
 	}
 }
 .aparecer,
